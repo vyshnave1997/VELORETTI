@@ -1,0 +1,127 @@
+// FAQ.scss
+.faq-section {
+  width: 100%;
+  padding: 80px 20px;
+  background-color: #ffffff;
+
+  .faq-container {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .faq-title {
+      font-size: 6rem;
+      font-weight: 300;
+      color: #000000;
+      text-align: center;
+      margin-bottom: 60px;
+      line-height: 1.2;
+
+      @media (max-width: 768px) {
+        font-size: 2rem;
+        margin-bottom: 40px;
+      }
+    }
+
+    .paperwork-section {
+      margin-bottom: 60px;
+      text-align: center;
+
+      .paperwork-title {
+        font-size: 2.25rem;
+        font-weight: 400;
+        color: #000000;
+        margin-bottom: 20px;
+        line-height: 1.4;
+      }
+
+      .paperwork-content {
+        font-size: 0.9rem;
+        line-height: 1.6;
+        color: #666666;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+    }
+
+    .faq-list {
+      max-width: 800px;
+      margin: 0 auto;
+
+      .faq-item {
+        border-bottom: 1px solid #e5e5e5;
+
+        &:last-child {
+          border-bottom: none;
+        }
+
+        .faq-question {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 30px 0;
+          background: none;
+          border: none;
+          cursor: pointer;
+          text-align: center;
+          font-size: 1.25rem;
+          font-weight: 400;
+          color: #000000;
+          line-height: 1.4;
+          transition: all 0.3s ease;
+          position: relative;
+
+          &:hover {
+            color: #333333;
+          }
+
+          &.active {
+            color: #000000;
+          }
+
+          @media (max-width: 768px) {
+            font-size: 1.1rem;
+            padding: 25px 0;
+          }
+
+          .faq-icon {
+            font-size: 1.5rem;
+            font-weight: 300;
+            transition: transform 0.3s ease;
+            position: absolute;
+            right: 0;
+
+            &.rotate {
+              transform: rotate(45deg);
+            }
+          }
+        }
+
+        .faq-answer {
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.3s ease, padding 0.3s ease;
+          text-align: center;
+
+          &.open {
+            max-height: 200px;
+            padding-bottom: 30px;
+          }
+
+          p {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: #666666;
+            margin: 0 auto;
+            max-width: 700px;
+            padding: 0 50px;
+
+            @media (max-width: 768px) {
+              padding: 0 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

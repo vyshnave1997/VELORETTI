@@ -1,0 +1,302 @@
+.navbar {
+  width: 100%;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  position: relative;
+  z-index: 50;
+
+  &__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+
+    @media (min-width: 640px) {
+      padding: 0 1.5rem;
+    }
+
+    @media (min-width: 1024px) {
+      padding: 0 2rem;
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 1.8rem;
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    span {
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: #000000;
+    }
+  }
+
+  &__menu {
+    display: none;
+    align-items: center;
+    gap: 1rem;
+
+    @media (min-width: 768px) {
+      display: flex;
+    }
+  }
+
+  &__item {
+    position: relative;
+
+    &--dropdown {
+      // Additional dropdown specific styles can go here
+    }
+  }
+
+  &__button,
+  &__link {
+    display: flex;
+    align-items: center;
+    font-size: 0.6rem;
+    font-weight: 500;
+    color: #000000;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: #4b5563;
+    }
+  }
+
+  &__arrow {
+    margin-left: 0.25rem;
+    height: 0.5rem;
+    width: 0.5rem;
+  }
+
+  &__dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 0.25rem;
+    width: 12rem;
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    border-radius: 0.125rem;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.2s ease;
+    z-index: 60;
+
+    &--active {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    &-content {
+      padding: 0.5rem 0;
+    }
+
+    &-link {
+      display: block;
+      padding: 0.5rem 1rem;
+      font-size: 0.875rem;
+      color: #374151;
+      text-decoration: none;
+      transition: background-color 0.2s ease;
+
+      &:hover {
+        background-color: #f9fafb;
+      }
+    }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__language {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &-text {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: #000000;
+    }
+  }
+
+  &__flag {
+    width: 1.25rem;
+    height: 1rem;
+  }
+
+  &__icon-btn {
+    padding: 0.25rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    color: #000000;
+  }
+
+  &__mobile-toggle {
+    display: block;
+
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__mobile-btn {
+    padding: 0.5rem;
+    color: #000000;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: #4b5563;
+    }
+  }
+
+  &__mobile-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  &__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 40;
+  }
+}
+
+// UK Flag CSS
+.flag-gb {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+
+  &__blue {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #012169;
+  }
+
+  &__white-diag1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent 47%, white 47%, white 53%, transparent 53%);
+  }
+
+  &__white-diag2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(-45deg, transparent 47%, white 47%, white 53%, transparent 53%);
+  }
+
+  &__red-diag1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent 48.5%, #C8102E 48.5%, #C8102E 51.5%, transparent 51.5%);
+  }
+
+  &__red-diag2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(-45deg, transparent 48.5%, #C8102E 48.5%, #C8102E 51.5%, transparent 51.5%);
+  }
+
+  &__white-cross-v {
+    position: absolute;
+    top: 0;
+    left: 45%;
+    width: 10%;
+    height: 100%;
+    background-color: white;
+  }
+
+  &__white-cross-h {
+    position: absolute;
+    top: 45%;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    background-color: white;
+  }
+
+  &__red-cross-v {
+    position: absolute;
+    top: 0;
+    left: 47%;
+    width: 6%;
+    height: 100%;
+    background-color: #C8102E;
+  }
+
+  &__red-cross-h {
+    position: absolute;
+    top: 47%;
+    left: 0;
+    width: 100%;
+    height: 6%;
+    background-color: #C8102E;
+  }
+}
