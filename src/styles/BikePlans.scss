@@ -36,16 +36,18 @@
 
   &__image-section {
     position: relative;
-    height: 400px;
-    width: 380px;
+    height: 500px; // Increased height
+    width: 480px;  // Increased width
 
     @media (max-width: 768px) {
       height: 400px;
-      order: -1; // Image first on mobile
+      width: 100%;
+      order: -1;
     }
 
     @media (max-width: 480px) {
       height: 300px;
+      width: 100%;
     }
   }
 
@@ -73,8 +75,8 @@
   }
 
   &__img {
-    width: 380px;
-    height: 400px;
+    width: 480px;   // Increased width
+    height: 500px;  // Increased height
     object-fit: cover;
     object-position: center;
     transition: transform 0.3s ease;
@@ -84,6 +86,8 @@
     }
 
     @media (max-width: 768px) {
+      width: 100%;
+      height: 400px;
       &:hover {
         transform: none;
       }
@@ -109,9 +113,9 @@
   }
 
   &__title {
-    font-size: 1rem;
+    font-size: 2.5rem; // Increased for better visibility
     font-family: "Manrope", sans-serif;
-    font-weight: 400;
+    font-weight: 600;
     line-height: 1.1;
     color: #2d3748;
     margin: 0 0 2rem 0;
@@ -122,18 +126,18 @@
     }
 
     @media (max-width: 768px) {
-      font-size: 1.5rem;
+      font-size: 1.7rem;
       margin-bottom: 1.5rem;
     }
 
     @media (max-width: 480px) {
-      font-size: 1rem;
+      font-size: 1.2rem;
       margin-bottom: 1rem;
     }
   }
 
   &__description {
-    font-size: .8rem;
+    font-size: 1.2rem; // Increased for better readability
     line-height: 1.7;
     font-family: "Manrope", sans-serif;
     color: #4a5568;
@@ -155,7 +159,7 @@
   &__cta {
     background-color: transparent;
     color: #2d3748;
-    font-size: 0.5rem;
+    font-size: 0.9rem;
     font-weight: 500;
     font-family: "Manrope", sans-serif;
     padding: 0;
